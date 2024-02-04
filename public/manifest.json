@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Password manager Extenstion",
+    "description": "This is a password manager extension",
+    "version": "0.1",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "logo.png"
+    }
+}
