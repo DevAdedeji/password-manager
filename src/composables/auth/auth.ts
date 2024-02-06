@@ -22,10 +22,21 @@ export const useGoogleAuth = () => {
     const signOutUser = async () => {
         try{
             const result = await signOut(auth)
+            chrome.storage.local.remove("user");
             console.log(result)
         } catch(err){
             console.log(err)
         }
     }
     return { signInUser, signOutUser }
+}
+
+export const isUserAuthenticated = () => {
+    chrome.storage.local.get("user", function (result: any) {
+        if ("user" in result){
+            return true
+        } else{
+            return false
+        }
+    })
 }

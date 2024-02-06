@@ -1,10 +1,19 @@
 {
-    "manifest_version": 3,
+    "manifest_version": 2,
     "name": "Password manager Extenstion",
     "description": "This is a password manager extension",
     "version": "0.1",
-    "action": {
+    "browser_action": {
         "default_popup": "index.html",
         "default_icon": "logo.png"
-    }
+    },
+    "background": {
+        "persistent": false,
+        "page": "background.html"
+    },
+    "permissions": [
+        "storage",
+        "identity"
+    ],
+    "content_security_policy": "script-src 'self'    https://www.gstatic.com/ https://*.firebaseio.com   https://www.googleapis.com https://apis.google.com; object-src   'self'"
 }

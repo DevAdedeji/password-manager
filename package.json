@@ -13,6 +13,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@types/chrome": "^0.0.260",
     "@vueuse/core": "^10.7.2",
     "firebase": "^10.8.0",
     "vue": "^3.4.15",
