@@ -28,6 +28,7 @@
   background: transparent;
   font-size: 14px;
   caret-color: #ffffff;
+  color: #ffffff;
 }
 
 .form-box input:focus{

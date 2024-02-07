@@ -21,7 +21,7 @@ const router = createRouter({
 
 router.beforeEach( async (to, from, next)=>{
     const { getItem } = useStorage()
-    const token = await getItem("auth.p")
+    const token = await getItem("auth.token")
     if(to.meta.authRequired === true){
       if(token){
         next();

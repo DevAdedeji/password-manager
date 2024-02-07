@@ -3,25 +3,19 @@ import { ref } from 'vue'
 
 const authenticated = ref(false);
 export const useUser = () => {
-    const { saveItem, getItem, removeItem } = useStorage()
-    const setUser = async (user: any) => {
-        await saveItem({name: "user", item: user})
-        isUserAuthenticated();
-    }
-    const removeUser = () => {
-        removeItem("user")
-    }
+    const { getItem } = useStorage()
+
     const isUserAuthenticated = async () => {
-        const user = await getItem("user")
-        if(user){
+        const token = await getItem("auth.token")
+        if(token){
             authenticated.value = true
         } else {
             authenticated.value = false
         }
     }
-    const getUser = async () => {
-        const user = await getItem("user")
+    const getUserId = async () => {
+        const user = await getItem("auth.user_id")
         return user
     }
-    return { setUser, isUserAuthenticated, removeUser, authenticated, getUser }
+    return { isUserAuthenticated, authenticated, getUserId }
 }
