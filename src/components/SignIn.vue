@@ -1,14 +1,10 @@
-<script setup lang="ts">
-import { useGoogleAuth } from '@/composables/auth'
-const { signInUser } = useGoogleAuth()
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="w-full h-full flex items-center justify-center">
     <button
       type="button"
       class="flex items-center justify-center gap-4 border border-[#979797] py-2 px-6 rounded-md"
-      @click="signInUser"
     >
       <svg
         id="google"
