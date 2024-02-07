@@ -14,8 +14,7 @@
   },
   "dependencies": {
     "@types/chrome": "^0.0.260",
-    "@vueuse/core": "^10.7.2",
-    "firebase": "^10.8.0",
+    "axios": "^1.6.7",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   },

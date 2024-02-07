@@ -10,5 +10,8 @@
     "permissions": [
         "storage",
         "identity"
-    ] 
+    ],
+    "host_permissions": [
+        "https://password-manager.cyclic.app/api/*"
+    ]
 }

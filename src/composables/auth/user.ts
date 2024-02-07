@@ -1,11 +1,10 @@
-import { type User } from 'firebase/auth'
 import { useStorage } from '../storage'
 import { ref } from 'vue'
 
 const authenticated = ref(false);
 export const useUser = () => {
     const { saveItem, getItem, removeItem } = useStorage()
-    const setUser = async (user: User) => {
+    const setUser = async (user: any) => {
         await saveItem({name: "user", item: user})
         isUserAuthenticated();
     }

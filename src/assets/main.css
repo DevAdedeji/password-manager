@@ -7,3 +7,33 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.form-box{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-box label{
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.form-box input{
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #979797;
+  outline: none;
+  padding: 0 16px;
+  background: transparent;
+  font-size: 14px;
+  caret-color: #ffffff;
+}
+
+.form-box input:focus{
+  border: 1px solid #635FC7;
+}
+
+.form-box input::placeholder{
+  color: #828FA3;
+}
