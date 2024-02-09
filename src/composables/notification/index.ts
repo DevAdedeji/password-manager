@@ -10,7 +10,7 @@ export const useNotification = () => {
         showNotification.value = true
         setTimeout(()=>{
             showNotification.value = false
-        }, 3000)
+        }, 2000)
     }
     return { handleNotification, notType, notMsg, showNotification }
 }
