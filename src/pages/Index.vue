@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import AddPasswordModal from '@/components/AddPasswordModal.vue'
 import EditPasswordModal from '@/components/EditPasswordModal.vue'
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useAuth } from '@/composables/auth'
 import { usePassword } from '@/composables/passwords'
 import { useEncryption } from '@/composables/encryption'
@@ -35,7 +35,9 @@ const copyPasswordToClipboard = (password: PasswordEntity) => {
   })
 }
 
-fetchPasswords()
+onMounted(async () => {
+  await fetchPasswords()
+})
 </script>
 
 <template>
