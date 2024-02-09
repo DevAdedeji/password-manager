@@ -16,7 +16,7 @@
 
 .form-box label{
   font-size: 14px;
-  color: #ffffff;
+  color: #000000;
 }
 
 .form-box input{
@@ -27,12 +27,12 @@
   padding: 0 16px;
   background: transparent;
   font-size: 14px;
-  caret-color: #ffffff;
-  color: #ffffff;
+  caret-color: #000000;
+  color: #000000;
 }
 
 .form-box input:focus{
-  border: 1px solid #635FC7;
+  border: 1px solid #007BFF;
 }
 
 .form-box input::placeholder{

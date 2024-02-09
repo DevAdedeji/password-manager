@@ -6,7 +6,7 @@ const { showNotification, notMsg, notType } = useNotification()
 </script>
 
 <template>
-  <main class="w-[350px] h-[600px] bg-[#2B2C37] relative">
+  <main class="w-[350px] h-[600px] bg-white relative border border-black">
     <Notification v-if="showNotification" :message="notMsg" :type="notType" />
     <RouterView />
   </main>

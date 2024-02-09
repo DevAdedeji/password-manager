@@ -10,7 +10,7 @@ const { form, registerUser, submit } = useAuth()
     <div class="w-[80%] mx-auto flex flex-col items-center gap-4">
       <img src="/logo.png" class="w-[50px] h-[50px] mb-5" />
       <form @submit.prevent="registerUser" class="w-full flex flex-col gap-6">
-        <h1 class="text-white text-xl text-center font-semibold">Create Account</h1>
+        <h1 class="text-primary text-xl text-center font-semibold">Create Account</h1>
         <div class="form-box">
           <label for="email" name="email">Email</label>
           <input type="email" placeholder="Email" v-model="form.email" required />
@@ -28,7 +28,7 @@ const { form, registerUser, submit } = useAuth()
           <Loader v-if="submit" />
           <span>Register</span>
         </button>
-        <p class="text-md text-center text-white">
+        <p class="text-md text-center text-black">
           Already have an account?
           <RouterLink to="/login" class="text-primary">Sign in</RouterLink>
         </p>
