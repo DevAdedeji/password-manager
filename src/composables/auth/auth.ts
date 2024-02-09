@@ -1,6 +1,6 @@
 import { ref } from "vue"
 import { $api } from "@/services"
-import { type UserAuthType } from "@/services/auth/types"
+import { type UserAuthModel } from "@/services/auth/types"
 import { useNotification } from "../notification"
 import { useRouter } from "vue-router"
 import { useStorage } from "../storage"
@@ -9,7 +9,7 @@ export const useAuth = () => {
     const { handleNotification } = useNotification()
     const { saveItem, removeItem } = useStorage()
     const router = useRouter()
-    const form = ref<UserAuthType>({
+    const form = ref<UserAuthModel>({
         email: "",
         password: "",
     })

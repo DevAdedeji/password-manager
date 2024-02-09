@@ -23,7 +23,10 @@ const bgColor = computed(() => {
 </script>
 
 <template>
-  <div class="absolute top-0 right-0 left-0 w-full h-10 p-2 text-center" :class="bgColor">
+  <div
+    class="absolute top-0 right-0 left-0 w-full h-10 p-2 text-center z-[999999999]"
+    :class="bgColor"
+  >
     <p class="text-white text-md">{{ message }}</p>
   </div>
 </template>
